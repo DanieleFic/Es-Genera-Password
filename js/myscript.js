@@ -20,7 +20,7 @@ generaPasswordButton.addEventListener('click',function(){
     arrayPasswordGenerata = [];
         lunghezzaPassword = document.getElementById("lunghezza").value
         if((valueCheckboxLettere.checked == true) && (valueCheckboxSimboli.checked == false) && (valueCheckboxNumeri.checked == false)){
-            generaPasswordMaiusc()
+            generaPasswordLettere()
             console.log("entra in if Lettere")
         }else if((valueCheckboxSimboli.checked == true) && (valueCheckboxLettere.checked == false) && (valueCheckboxNumeri.checked == false)){
             generaPasswordSimboli()
@@ -32,7 +32,7 @@ generaPasswordButton.addEventListener('click',function(){
             generaPasswordMaiuscSimboli()
             console.log("entra in  else if numeri e simboli")
         }else if((valueCheckboxLettere.checked == true) && (valueCheckboxNumeri.checked == true) && (valueCheckboxSimboli.checked == false)){
-            generaPasswordMaiuscNumeri()
+            generaPasswordLettereNumeri()
             console.log("entra in  else if lettere e numeri")
         }else if((valueCheckboxLettere.checked == false) && (valueCheckboxNumeri.checked == true) && (valueCheckboxSimboli.checked == true)){
             generaPasswordNumeriSimboli()
@@ -67,7 +67,7 @@ function generaPasswordTutto(){
     
 }
 
-function generaPasswordMaiuscNumeri(){
+function generaPasswordLettereNumeri(){
     if(caratteriRipetibili.checked == true){
         while(arrayPasswordGenerata.length < lunghezzaPassword){
             let lettereMaiuscSimboliRandom = array2[Math.floor(Math.random()*array2.length)];
@@ -124,7 +124,7 @@ function generaPasswordMaiuscSimboli(){
 }}
 
 
-function generaPasswordMaiusc(){
+function generaPasswordLettere(){
     const lettereMaiusc = array.slice(0,50)
     if(caratteriRipetibili.checked == true){
         while(arrayPasswordGenerata.length < lunghezzaPassword){
