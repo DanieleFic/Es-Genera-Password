@@ -3,7 +3,7 @@
 let arrayPasswordGenerata = [];//array vuoto in cui pushiamo la password
 console.log(arrayPasswordGenerata)
 let generaPasswordButton = document.getElementById("generapasswordbutton");
-let passwordGenerata = document.getElementById("passowrdgenerata");
+let passwordGenerata = document.getElementById("passwordgenerata");
 let lunghezzaPassword = "";
 let valueCheckboxLettere = document.getElementById("lettere")
 let valueCheckboxSimboli = document.getElementById("simboli")
@@ -180,3 +180,22 @@ function generaPasswordNumeri(){
             console.log("non si ripete")
         }}
 }}
+
+function myFunction() {
+    /* Get the text field */
+    let copyText = document.getElementById("passwordgenerata");
+  
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.innerHTML);
+    console.log("password copiata");
+    alert("hai copiato la password")
+    
+    /* Alert the copied text */
+   /*let myVar = setInterval(myTimer, 1);
+    function myTimer() {
+    const d = new Date();
+    let passwordcopiata = copyText.classList.add("copiata");
+}*/
+  }
+
+
