@@ -181,21 +181,15 @@ function generaPasswordNumeri(){
         }}
 }}
 
-function myFunction() {
+function CopiaPassword() {
     /* Get the text field */
     let copyText = document.getElementById("passwordgenerata");
-  
+
     /* Copy the text inside the text field */
     navigator.clipboard.writeText(copyText.innerHTML);
     console.log("password copiata");
     alert("hai copiato la password")
-    
-    /* Alert the copied text */
-   /*let myVar = setInterval(myTimer, 1);
-    function myTimer() {
-    const d = new Date();
-    let passwordcopiata = copyText.classList.add("copiata");
-}*/
-  }
+
+}
 
 
